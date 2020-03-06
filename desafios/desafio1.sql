@@ -4,7 +4,7 @@ USE queries_unite;
 
 CREATE TABLE users (
 id INT PRIMARY KEY auto_increment,
-fullname VARCHAR(100) NOT NULL,
+full_name VARCHAR(100) NOT NULL,
 current_age INT NOT NULL,
 current_job VARCHAR(100) NOT NULL 
 );
@@ -39,7 +39,7 @@ FOREIGN KEY (id) REFERENCES users(id),
 FOREIGN KEY (travel_package_id) REFERENCES travel_packages(travel_package_id)
 );
 
-INSERT INTO users (fullname, current_age, current_job)
+INSERT INTO users (full_name, current_age, current_job)
 VALUES 
 ('Rafael Martins', 33, 'Arquiteto'),
 ('Amanda Rocha', 25, 'Desenvolvedora de Software'),
@@ -70,7 +70,7 @@ VALUES
 (3, 3),
 (4, 4),
 (5, 3),
-(1, 5);
+(5, 5);
 
 INSERT INTO travel_packages_locations (travel_package_id, location_id) 
 VALUES
