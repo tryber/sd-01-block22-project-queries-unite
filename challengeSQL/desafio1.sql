@@ -5,22 +5,22 @@ CREATE TABLE users(
   user_id INT PRIMARY KEY auto_increment,
   full_name VARCHAR(50) NOT NULL,
   current_age INT NOT NULL,
-  current_job VARCHAR(50)
+  current_job VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE travel_packages(
   travel_package_id INT PRIMARY KEY auto_increment,
   travel_package_name VARCHAR(50),
-  cost DECIMAL(7,2),
-  departure_date DATE,
-  arrival_date DATE,
+  cost DECIMAL(7,2) NOT NULL,
+  departure_date DATE NOT NULL,
+  arrival_date DATE NOT NULL,
   purchase_count INT DEFAULT 0
 );
 
 CREATE TABLE locations(
   locations_id INT PRIMARY KEY auto_increment,
-  city VARCHAR(50),
-  country VARCHAR(50)
+  city VARCHAR(50) NOT NULL,
+  country VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE purchases(
