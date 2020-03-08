@@ -10,3 +10,4 @@ INNER JOIN
 users u
 ON u.id = p.id
 ORDER BY 5 desc;
+SELECT * FROM travel_package_info;

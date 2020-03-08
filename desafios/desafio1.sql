@@ -55,13 +55,13 @@ VALUES
 ('França', 'Paris'),
 ('Estados Unidos', 'Nova Iorque');
 
-INSERT INTO travel_packages (package_name, start_date, end_date, value) 
+INSERT INTO travel_packages (package_name, start_date, end_date, value, purchase_count) 
 VALUES
-('Promoção 3 destinos', '2022/09/25', '2022/10/12', 12500.99),
-('Vem Pro Verão', '2022/10/16', '2022/10/26', 9650.99),
-('Cultura Francesa', '2022/07/12', '2022/07/20', 3900.99),
-('Vem Pro Verão', '2022/02/19', '2022/03/26', 7725.99),
-('Promoção 3 destinos', '2022/09/13', '2022/10/18', 13500.99);
+('Promoção 3 destinos', '2022/09/25', '2022/10/12', 12500.99, 1),
+('Vem Pro Verão', '2022/10/16', '2022/10/26', 9650.99, 1),
+('Cultura Francesa', '2022/07/12', '2022/07/20', 3900.99, 2),
+('Vem Pro Verão', '2022/02/19', '2022/03/26', 7725.99, 1),
+('Promoção 3 destinos', '2022/09/13', '2022/10/18', 13500.99, 1);
 
 INSERT INTO purchases (id, travel_package_id) 
 VALUES
