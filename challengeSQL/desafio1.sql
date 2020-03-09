@@ -12,8 +12,8 @@ CREATE TABLE travel_packages(
   travel_package_id INT PRIMARY KEY auto_increment,
   travel_package_name VARCHAR(50),
   cost DECIMAL(7,2) NOT NULL,
-  departure_date DATE NOT NULL,
-  arrival_date DATE NOT NULL,
+  departure_date DATETIME NOT NULL,
+  arrival_date DATETIME NOT NULL,
   purchase_count INT DEFAULT 0
 );
 
