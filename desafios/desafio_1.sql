@@ -20,7 +20,8 @@ travel_package_id INT PRIMARY KEY auto_increment,
 package_name VARCHAR(255) NOT NULL,
 price DOUBLE NOT NULL,
 start_date DATE NOT NULL,
-end_date DATE NOT NULL
+end_date DATE NOT NULL,
+purchase_count INT DEFAULT 0
 );
 
 CREATE TABLE travel_packages_locations (
@@ -36,8 +37,7 @@ purchase_id INT PRIMARY KEY auto_increment,
 users_id INT NOT NULL,
 travel_package_id INT NOT NULL,
 FOREIGN KEY (users_id) REFERENCES users(users_id),
-FOREIGN KEY (travel_package_id) REFERENCES travel_packages(travel_package_id),
-purchase_count INT DEFAULT 0
+FOREIGN KEY (travel_package_id) REFERENCES travel_packages(travel_package_id)
 );
 
 INSERT INTO users (full_name, current_age, current_job)
