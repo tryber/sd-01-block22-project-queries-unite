@@ -3,12 +3,11 @@ CREATE DATABASE IF NOT EXISTS queries_unite;
 USE queries_unite;
 
 CREATE TABLE users (
-  id INT AUTO_INCREMENT,
+  id INT AUTO_INCREMENT PRIMARY KEY,
   full_name VARCHAR(45) NOT NULL,
   current_age INT NOT NULL,
-  current_job VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id))
-ENGINE = InnoDB;
+  current_job VARCHAR(45) NOT NULL
+  ) ENGINE = InnoDB;
 
 CREATE TABLE travel_packages (
   travel_packages_id INT AUTO_INCREMENT PRIMARY KEY,
