@@ -13,4 +13,3 @@ on p.travel_package_id = t.travel_package_id
 group by t.travel_package_id) as teste;
 
 SELECT * FROM revenue_report;
-
