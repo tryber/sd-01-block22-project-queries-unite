@@ -40,6 +40,18 @@ FOREIGN KEY (users_id) REFERENCES users(users_id),
 FOREIGN KEY (travel_package_id) REFERENCES travel_packages(travel_package_id)
 );
 
+-- USE queries_unite;
+DELIMITER $$
+CREATE TRIGGER increment_travel_package_purchases
+AFTER INSERT ON purchases
+FOR EACH ROW
+BEGIN
+UPDATE travel_packages AS T
+SET T.purchase_count = (purchase_count + 1)
+WHERE T.travel_package_id = NEW.travel_package_id;
+END; $$
+DELIMITER ;
+
 INSERT INTO users (full_name, current_age, current_job)
 VALUES 
 ('Rafael Martins', 33, 'Arquiteto'),
@@ -77,4 +89,5 @@ INSERT INTO travel_packages_locations (travel_package_id, location_id)
 VALUES
 (1, 1), (1, 2), (1, 3), (2, 4), (2, 5), (3, 4), (3, 4), (4, 1), (4, 2), (5, 3), (5, 5), (5, 4);
 
--- colocando mais um destino freança, repetido, na posição travel_packages_locations_id 6
+-- colocando mais um destino frança, repetido, na posição travel_packages_locations_id 6
+-- mudando o trigger, porque no pushcase simplismente ele não funciona.
