@@ -39,7 +39,7 @@ purchase_id INT AUTO_INCREMENT PRIMARY KEY,
 users_id INT NOT NULL,
 travel_packages_id INT NOT NULL,
 FOREIGN KEY (users_id) REFERENCES users(id),
-FOREIGN KEY (travel_packages_id) REFERENCES travel_packages(travel_packages_id),
+FOREIGN KEY (travel_packages_id) REFERENCES travel_packages(travel_packages_id)
 ) ENGINE = InnoDB;
 
 INSERT INTO users (full_name, current_age, current_job)
