@@ -382,7 +382,7 @@ Para facilitar estudos internos do perfil das pessoas que compram os pacotes de 
 
 ### Entregáveis
 
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos SQL dos desafios 1 ao 10.
+Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos SQL dos desafios 1 ao 13.
 
 Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
 
