@@ -3,8 +3,8 @@ USE queries_unite;
 DELIMITER $$
 
 CREATE PROCEDURE find_travel_packages_by_period(
-	IN start_date VARCHAR(20),
-  IN end_date VARCHAR(20)
+IN start_date VARCHAR(20),
+IN end_date VARCHAR(20)
 )
 BEGIN
   SELECT travel_package_id AS id,

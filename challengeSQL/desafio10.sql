@@ -3,8 +3,8 @@ USE queries_unite;
 DELIMITER $$
 
 CREATE FUNCTION average_amount_spent_given_age_range(
-	min_age INT,
-  max_age INT
+min_age INT,
+max_age INT
 )
 RETURNS INT READS SQL DATA
 BEGIN

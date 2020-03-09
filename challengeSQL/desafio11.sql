@@ -30,7 +30,6 @@ VALUES
 (5, 3),
 (5, 5);
 
-
 SELECT travel_package_id AS id,
 purchase_count 
 FROM queries_unite.travel_packages;
