@@ -21,7 +21,5 @@ BEGIN
     INTO average_value;
     RETURN average_value;
 END $$
-
 DELIMITER ;
-
 SELECT average_amount_spent_given_age_range(30,50);
