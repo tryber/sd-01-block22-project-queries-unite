@@ -1,11 +1,9 @@
 USE queries_unite;
-SELECT l1.location_id, l1.city, l1.country, 
-(SELECT (COUNT(*) - 1)
-FROM travel_packages_locations trl WHERE trl.location_id = l1.location_id)
-AS travel_amount FROM 
-locations l1
-GROUP BY l1.location_id;
-
-SELECT * FROM travel_packages;
-SELECT * FROM travel_packages_locations;
-SELECT purchase_count FROM travel_packages;
+SELECT l1.location_id, l1.city, l1.country, COUNT(trl.location_id)
+FROM purchases p
+INNER JOIN travel_packages_locations trl 
+ON p.travel_package_id = trl.travel_package_id
+INNER JOIN locations l1 ON l1.location_id = trl.location_id
+GROUP BY location_id
+ORDER BY 4 DESC, 1 ASC
+LIMIT 3;
