@@ -40,7 +40,6 @@ users_id INT NOT NULL,
 travel_packages_id INT NOT NULL,
 FOREIGN KEY (users_id) REFERENCES users(id),
 FOREIGN KEY (travel_packages_id) REFERENCES travel_packages(travel_packages_id),
-purchase_count INT DEFAULT 0
 ) ENGINE = InnoDB;
 
 INSERT INTO users (full_name, current_age, current_job)
