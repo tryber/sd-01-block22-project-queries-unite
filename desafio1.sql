@@ -12,8 +12,8 @@ CREATE TABLE travel_packages (
   package_id INT PRIMARY KEY AUTO_INCREMENT,
   package_name VARCHAR(30) NOT NULL,
   package_price DOUBLE(9,2) NOT NULL,
-  departure_date DATE NOT NULL,
-  return_date DATE NOT NULL,
+  departure_date DATETIME NOT NULL,
+  return_date DATETIME NOT NULL,
   purchase_count INT DEFAULT 0
 ) ENGINE = InnoDB;
 
