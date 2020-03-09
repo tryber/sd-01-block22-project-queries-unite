@@ -26,5 +26,5 @@ FROM queries_unite.travel_packages
 WHERE queries_unite.purchases.travel_packages_id = queries_unite.travel_packages.travel_packages_id
 ) as cost
 FROM queries_unite.purchases
-    ORDER BY 5;
+ORDER BY 5;
   
