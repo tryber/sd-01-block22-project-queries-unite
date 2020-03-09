@@ -5,7 +5,7 @@ CREATE FUNCTION average_amount_spent_given_age_range(value1 INT, value2 INT)
 RETURNS DOUBLE READS SQL DATA
 BEGIN
 DECLARE answer DOUBlE;
- SELECT
+SELECT
 AVG(T.price)
 FROM queries_unite.travel_packages AS T
 INNER JOIN queries_unite.purchases AS P

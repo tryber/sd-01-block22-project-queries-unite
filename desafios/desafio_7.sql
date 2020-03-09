@@ -15,7 +15,7 @@ WHERE queries_unite.locations.location_id = queries_unite.travel_packages_locati
 SELECT country FROM queries_unite.locations
 WHERE queries_unite.locations.location_id = queries_unite.travel_packages_locations.location_id
 )AS country,
- COUNT(location_id) AS travel_amount
+COUNT(location_id) AS travel_amount
 FROM queries_unite.travel_packages_locations
 WHERE location_id <> 0
 GROUP BY city
