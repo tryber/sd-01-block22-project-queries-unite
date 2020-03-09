@@ -19,5 +19,3 @@ END $$
 DELIMITER ;
 
 CALL find_travel_packages_by_period('2022-07-17', '2022-10-25');
-
--- CONFIRMAR SE TEM QUE DEIXAR A DATA COM ESTES VALORES
