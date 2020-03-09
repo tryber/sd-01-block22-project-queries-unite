@@ -1,3 +1,5 @@
+USE queries_unite;
+CREATE VIEW revenue_report AS
 SELECT
 MIN((
 SELECT price
