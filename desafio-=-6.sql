@@ -1,19 +1,9 @@
 CREATE VIEW amount_spent_by_user AS
-SELECT 
-(
-SELECT users_id
-FROM queries_unite.travel_packages
-WHERE queries_unite.purchases.travel_packages_id = queries_unite.travel_packages.travel_packages_id
-group by users_id
-) as user_id,
-(
-SELECT full_name
-FROM queries_unite.users
-WHERE queries_unite.purchases.users_id = queries_unite.users.id
-) as user_name,
-(
-SELECT package_price_total
-FROM queries_unite.travel_packages
-WHERE queries_unite.purchases.travel_packages_id = queries_unite.travel_packages.travel_packages_id
-) as amount
-FROM queries_unite.purchases;
+SELECT t3.id, t3.full_name, sum(t2.package_price_total)
+FROM queries_unite.purchases AS t1
+INNER JOIN queries_unite.travel_packages AS t2
+ON t1.travel_packages_id = t2.travel_packages_id
+INNER JOIN queries_unite.users AS t3
+ON t1.users_id = t3.id
+group by t1.users_id
+order by 3;
