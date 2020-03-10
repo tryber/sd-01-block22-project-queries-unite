@@ -3,7 +3,7 @@ USE queries_unite;
 
 CREATE TABLE users (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  full_name VARCHAR(50) NOT NULL,
+  full_name VARCHAR(50) UNIQUE NOT NULL,
   current_age INT NOT NULL,
   current_job VARCHAR(30) NOT NULL
 ) ENGINE = InnoDB;
