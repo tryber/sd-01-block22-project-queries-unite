@@ -42,7 +42,6 @@ VALUES ('África do Sul', 'Cape Town'), ('Indonésia', 'Bali'), ('Marrocos', 'Ma
 CREATE TABLE IF NOT EXISTS user_travel_packages (
   user_id INT NOT NULL,
   travel_package_id INT NOT NULL,
-  PRIMARY KEY (user_id, travel_package_id),
   FOREIGN KEY (user_id) REFERENCES queries_unite.users(id),
   FOREIGN KEY (travel_package_id) REFERENCES queries_unite.travel_packages(travel_package_id)
 ) ENGINE = InnoDB;
@@ -53,10 +52,9 @@ VALUES (1,1), (2,2), (3,3), (4,4), (5,3), (5,5);
 CREATE TABLE IF NOT EXISTS travel_packages_locations (
   travel_package_id INT NOT NULL,
   location_id INT NOT NULL,
-  PRIMARY KEY (travel_package_id, location_id),
   FOREIGN KEY (travel_package_id) REFERENCES queries_unite.travel_packages(travel_package_id),
   FOREIGN KEY (location_id) REFERENCES queries_unite.location(location_id)
 ) ENGINE = InnoDB;
- 
+
 INSERT INTO travel_packages_locations (travel_package_id, location_id)
-VALUES (1,1), (1,2), (1,3), (2,4), (2,5), (3,4), (4,1), (4,2), (5,3), (5,5), (5,4);
+VALUES (1,1), (1,2), (1,3), (2,4), (2,5), (3,4), (4,1), (4,2), (3,4), (5,3), (5,5), (5,4);
