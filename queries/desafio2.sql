@@ -1,2 +1,2 @@
 CREATE TABLE clone_troopers
-LIKE users;
+LIKE queries_unite.users;

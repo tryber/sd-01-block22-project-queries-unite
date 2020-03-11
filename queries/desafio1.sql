@@ -81,5 +81,6 @@ INSERT INTO travel_packages_locations (travel_package_id, location_id) VALUES
 (4, 1),
 (4, 2),
 (5, 3),
+(5, 4),
 (5, 5),
 (5, 4);
