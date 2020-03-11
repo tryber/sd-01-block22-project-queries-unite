@@ -18,8 +18,8 @@ CREATE TABLE IF NOT EXISTS travel_packages (
   travel_package_id INT NOT NULL AUTO_INCREMENT,
   travel_package_name VARCHAR(45) NOT NULL,
   travel_package_price DOUBLE UNSIGNED NOT NULL,
-  departure_date DATE NOT NULL,
-  return_date DATE NOT NULL,
+  departure_date DATETIME NOT NULL,
+  return_date DATETIME NOT NULL,
   purchase_count INT NOT NULL DEFAULT 0,
   PRIMARY KEY (travel_package_id)
 ) ENGINE = InnoDB;
@@ -46,8 +46,7 @@ CREATE TABLE IF NOT EXISTS user_travel_packages (
   FOREIGN KEY (travel_package_id) REFERENCES queries_unite.travel_packages(travel_package_id)
 ) ENGINE = InnoDB;
 
-INSERT INTO user_travel_packages (user_id, travel_package_id)
-VALUES (1,1), (2,2), (3,3), (4,4), (5,3), (5,5);
+INSERT INTO user_travel_packages (user_id, travel_package_id);
 
 CREATE TABLE IF NOT EXISTS travel_packages_locations (
   travel_package_id INT NOT NULL,
