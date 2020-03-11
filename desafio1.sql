@@ -1,27 +1,18 @@
 CREATE DATABASE IF NOT EXISTS queries_unite;
 USE queries_unite;
 
-CREATE TABLE IF NOT EXISTS job (
-  job_id INT NOT NULL AUTO_INCREMENT,
-  current_job VARCHAR(45) NOT NULL,
-  PRIMARY KEY (job_id)
-) ENGINE = InnoDB;
-
-INSERT INTO job (current_job)
-VALUES ('Arquiteto'), ('Desenvolvedora de Software'), ('Pintor'), ('Contadora'), ('Engenheira de Alimentos');
-
 CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL AUTO_INCREMENT,
   full_name VARCHAR(45) UNIQUE NOT NULL,
   current_age INT UNSIGNED NOT NULL,
-  job_id INT NOT NULL,
-  PRIMARY KEY (id, job_id),
-  FOREIGN KEY (job_id) REFERENCES queries_unite.job(job_id)
+  current_job VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id)
 ) ENGINE = InnoDB;
 
-INSERT INTO users (full_name, current_age, job_id)
-VALUES ('Rafael Martins', 33, 1), ('Amanda Rocha', 25, 2), ('Jonas Cabral', 18, 3), ('Carol Domingues', 37, 4),
-('Sabrina Ferreira', 45, 5);
+INSERT INTO users (full_name, current_age, current_job)
+VALUES ('Rafael Martins', 33, 'Arquiteto'), ('Amanda Rocha', 25, 'Desenvolvedora de Software'),
+('Jonas Cabral', 18, 'Pintor'), ('Carol Domingues', 37, 'Contadora'),
+('Sabrina Ferreira', 45, 'Engenheira de Alimentos');
 
 CREATE TABLE IF NOT EXISTS travel_packages (
   travel_package_id INT NOT NULL AUTO_INCREMENT,
