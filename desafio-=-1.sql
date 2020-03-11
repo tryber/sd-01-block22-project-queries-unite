@@ -12,10 +12,10 @@ CREATE TABLE users (
 CREATE TABLE travel_packages (
   travel_packages_id INT AUTO_INCREMENT PRIMARY KEY,
   package_name VARCHAR(50) NOT NULL,
-  package_price_total DECIMAL(10,2) NOT NULL,
+  package_price_total DOUBLE NOT NULL,
   purchase_count INT NOT NULL DEFAULT 0,
-  departure_date DATE NOT NULL,
-  return_date DATE NOT NULL
+  departure_date DATETIME NOT NULL,
+  return_date DATETIME NOT NULL
   ) ENGINE = InnoDB;
 
 CREATE TABLE  locations (
