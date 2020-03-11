@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS job (
 INSERT INTO job (current_job)
 VALUES ('Arquiteto'), ('Desenvolvedora de Software'), ('Pintor'), ('Contadora'), ('Engenheira de Alimentos');
 
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL AUTO_INCREMENT,
   full_name VARCHAR(45) UNIQUE NOT NULL,
   current_age INT UNSIGNED NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS user (
   FOREIGN KEY (job_id) REFERENCES queries_unite.job(job_id)
 ) ENGINE = InnoDB;
 
-INSERT INTO user (full_name, current_age, job_id)
+INSERT INTO users (full_name, current_age, job_id)
 VALUES ('Rafael Martins', 33, 1), ('Amanda Rocha', 25, 2), ('Jonas Cabral', 18, 3), ('Carol Domingues', 37, 4),
 ('Sabrina Ferreira', 45, 5);
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS user_travel_packages (
   user_id INT NOT NULL,
   travel_package_id INT NOT NULL,
   PRIMARY KEY (user_id, travel_package_id),
-  FOREIGN KEY (user_id) REFERENCES queries_unite.user(id),
+  FOREIGN KEY (user_id) REFERENCES queries_unite.users(id),
   FOREIGN KEY (travel_package_id) REFERENCES queries_unite.travel_packages(travel_package_id)
 ) ENGINE = InnoDB;
 
@@ -66,6 +66,6 @@ CREATE TABLE IF NOT EXISTS travel_packages_locations (
   FOREIGN KEY (travel_package_id) REFERENCES queries_unite.travel_packages(travel_package_id),
   FOREIGN KEY (location_id) REFERENCES queries_unite.location(location_id)
 ) ENGINE = InnoDB;
-
+ 
 INSERT INTO travel_packages_locations (travel_package_id, location_id)
 VALUES (1,1), (1,2), (1,3), (2,4), (2,5), (3,4), (4,1), (4,2), (5,3), (5,5), (5,4);
