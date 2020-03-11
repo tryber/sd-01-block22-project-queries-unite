@@ -21,3 +21,5 @@ WHERE location_id <> 0
 GROUP BY city
 ORDER BY 4 DESC
 LIMIT 3;
+
+SELECT * FROM top_3_locations;

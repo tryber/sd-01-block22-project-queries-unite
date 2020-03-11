@@ -20,3 +20,5 @@ WHERE queries_unite.travel_packages.travel_package_id = queries_unite.purchases.
 FROM queries_unite.purchases
 GROUP BY user_name
 ORDER BY 3;
+
+SELECT * FROM amount_spent_by_user;
