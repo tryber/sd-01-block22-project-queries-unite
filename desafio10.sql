@@ -1,7 +1,7 @@
 USE queries_unite;
 
 DELIMITER $$
-CREATE FUNCTION average_amount_spent_given_age_range(min_age int, max_age int)
+CREATE FUNCTION average_amount_spent_given_age_range(min_age INT, max_age INT)
 RETURNS DOUBLE READS SQL DATA
 BEGIN
   DECLARE average_value DOUBLE;
