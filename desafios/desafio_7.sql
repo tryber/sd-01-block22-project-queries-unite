@@ -18,7 +18,7 @@ WHERE queries_unite.locations.location_id = queries_unite.travel_packages_locati
 COUNT(location_id) AS travel_amount
 FROM queries_unite.travel_packages_locations
 WHERE location_id <> 0
-GROUP BY city
+GROUP BY location_id
 ORDER BY 4 DESC
 LIMIT 3;
 
