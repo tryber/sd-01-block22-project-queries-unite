@@ -231,13 +231,13 @@ CREATE TABLE tabela1(
     coluna1 tipo restricoes,
     coluna2 tipo restricoes,
     colunaN tipo restricoes,
-) engine = InnoDB;
+) engine;
 
 CREATE TABLE tabela2(
     coluna1 tipo restricoes,
     coluna2 tipo restricoes,
     colunaN tipo restricoes,
-) engine = InnoDB;
+) engine;
 
 INSERT INTO tabela1 (coluna1, coluna2)
        VALUES ('exemplo de dados 1', 'exemplo de dados A'),
