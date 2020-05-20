@@ -1,0 +1,38 @@
+Indentifique as entidades
+
+  - users
+  - travel_packages
+  - locations
+  - travel_packages_locations
+  - purchases
+
+Identifique os atributos
+
+  * users *
+    - id
+    - full_name
+    - current_age
+    - current_job
+
+  * travel_packages *
+    - travel_packages_id
+    - package_name
+    - package_price
+    - purchase_count
+    - departure_date
+    - return_date   
+
+  * locations *
+    - location_id
+    - city
+    - country
+
+  * travel_packages_locations *
+    - travel_packages_locations_id
+    - travel_packages_id
+    - location_id
+
+  * purchases *
+    - purchase_id
+    - id
+    - travel_packages_id
